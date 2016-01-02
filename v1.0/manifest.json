@@ -1,0 +1,35 @@
+{
+  "name": "言葉の色",
+  "description": "Google画像検索結果の「色」だけを残して人々が言葉に対して持つ色のイメージを明らかにする試みです。",
+  "version": "1.0",
+  "manifest_version": 2,
+  "page_action": {
+    "default_icon": {
+      "19": "img/default-19.png",
+      "38": "img/default-38.png"
+    },
+    "default_title": "言葉の色"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.co.jp/search*"
+      ],
+      "css": ["css/content.css"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "icons": {
+    "16": "img/package-16.png",
+    "48": "img/package-48.png",
+    "128": "img/package-128.png"
+  }
+}
